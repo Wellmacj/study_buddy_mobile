@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="study_buddy_mobile.Pages.CalendarPage"
+             Title="CalendarPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="Calendar Page"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>
+
+<!-- 
+CalendarPage.xaml
+
+This page will display a calendar view for organizing and visualizing tasks/study sessions.
+
+TODO:
+- Integrate a calendar control (monthly/week/day view)
+- Display assignments or tasks pulled from To-Do list or Canvas submission list
+- Allow tapping a date to add/edit events or study sessions
+- Color-code study sessions, deadlines, and other events
+-->

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="study_buddy_mobile.Pages.StudyTrackerPage"
+             Title="StudyTrackerPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="Study Tracker Page"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>
+
+<!-- 
+StudyTrackerPage.xaml
+
+This page displays stats and patterns from completed study sessions.
+
+TODO:
+- Show graphs or data about past study durations and frequency
+- Analyze which study session lengths yield the best productivity
+- Pull data from the timer logs (Study Buzzer)
+- Optional: Recommend personalized study time goals based on trends
+-->
