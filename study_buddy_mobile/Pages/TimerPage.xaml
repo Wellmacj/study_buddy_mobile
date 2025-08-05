@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="study_buddy_mobile.Pages.TimerPage"
+             Title="Studdy Buddy Timer">
+
+    <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+
+        <Label x:Name="TimerLabel"
+               Text="00:00"
+               FontSize="48"
+               HorizontalOptions="Center" />
+
+        <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+
+            <Button Text="Start" Clicked="StartButton_Clicked" />
+            <Button Text="Pause" Clicked="PauseButton_Clicked" />
+            <Button Text="Reset" Clicked="ResetButton_Clicked" />
+
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -6,16 +6,7 @@
     xmlns:local="clr-namespace:study_buddy_mobile"
     Title="study_buddy_mobile">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
     <TabBar>
-        <ShellContent Title="Home" ContentTemplate="{DataTemplate pages:MainPage}" />
-        <ShellContent Title="Calendar" ContentTemplate="{DataTemplate pages:CalendarPage}" />
-        <ShellContent Title="To-Do List" ContentTemplate="{DataTemplate pages:TodoListPage}" />
-        <ShellContent Title="Study Buzzer" ContentTemplate="{DataTemplate pages:StudyBuzzerPage}" />
-        <ShellContent Title="Study Tracker" ContentTemplate="{DataTemplate pages:StudyTrackerPage}" />
-        <ShellContent Title="Canvas Submit" ContentTemplate="{DataTemplate pages:CanvasSubmitPage}" />
+        <ShellContent Title="Home" ContentTemplate="{DataTemplate local:MainPage}" />
     </TabBar>
 </Shell>
