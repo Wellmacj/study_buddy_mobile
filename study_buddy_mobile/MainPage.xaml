@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="study_buddy_mobile.MainPage">
+             x:Class="study_buddy_mobile.MainPage" 
+            BackgroundColor="Gray">
 
     <VerticalStackLayout
     Padding="30"
@@ -10,16 +11,19 @@
 
         <Label
         Text="Study Buddy Home Page"
-        FontSize="32"
-        HorizontalOptions="Center" />
+        FontAttributes="Bold"
+        TextColor="DarkRed"
+        FontSize="48"
+        HorizontalOptions="Center" 
+        HorizontalTextAlignment="Center"/>
 
         <Grid
         RowDefinitions="Auto"
         ColumnDefinitions="*,*"
         ColumnSpacing="10">
 
-            <Button Text="Timer" Grid.Column="0" Clicked="OnTimerClicked" />
-            <Button Text="Calendar" Grid.Column="1" Clicked="OnCalendarClicked" />
+            <Button Text="Timer" BackgroundColor="DarkRed" TextColor="White" Grid.Column="0" Clicked="OnTimerClicked" FontSize="24" />
+            <Button Text="Calendar" BackgroundColor="DarkRed" TextColor="White" Grid.Column="1" Clicked="OnCalendarClicked" FontSize="24" />
 
         </Grid>
     </VerticalStackLayout>

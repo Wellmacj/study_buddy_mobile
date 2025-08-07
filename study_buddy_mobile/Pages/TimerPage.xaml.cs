@@ -48,4 +48,13 @@ public partial class TimerPage : ContentPage
         secondsElapsed = 0;
         TimerLabel.Text = "00:00";
     }
+    private async void HomeButton_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new MainPage());
+    }
+
+    private async void Calendar_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new CalendarPage());
+    }
 }

@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="study_buddy_mobile.Pages.TimerPage"
-             Title="Studdy Buddy Timer">
+             Title="Studdy Buddy Timer"
+             BackgroundColor="Gray">
 
     <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
 
@@ -11,13 +12,23 @@
                FontSize="48"
                HorizontalOptions="Center" />
 
-        <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+        <Grid RowDefinitions="*,*,*"
+              ColumnDefinitions="*,*,*,*,*"
+              RowSpacing="16"
+              ColumnSpacing="5"
+              x:Name="timerGrid">
+            <Button BackgroundColor="DarkRed" TextColor="White" Grid.Row="0" Grid.Column="1" Text="Start" Clicked="StartButton_Clicked" />
+            <Button BackgroundColor="DarkRed" TextColor="White" Grid.Row="0" Grid.Column="2" Text="Pause" Clicked="PauseButton_Clicked" />
+            <Button BackgroundColor="DarkRed" TextColor="White" Grid.Row="0" Grid.Column="3" Text="Reset" Clicked="ResetButton_Clicked" />
+            <Button BackgroundColor="DarkRed" TextColor="White" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="Home" Clicked="HomeButton_Clicked" FontSize="24" />
+            <Button BackgroundColor="DarkRed" TextColor="White" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" Text="Calendar" Clicked="Calendar_Clicked" FontSize="24" />
+        </Grid>
+        <!--<HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
 
-            <Button Text="Start" Clicked="StartButton_Clicked" />
-            <Button Text="Pause" Clicked="PauseButton_Clicked" />
-            <Button Text="Reset" Clicked="ResetButton_Clicked" />
+            
 
-        </HorizontalStackLayout>
+            
+        </HorizontalStackLayout>-->
 
     </VerticalStackLayout>
 </ContentPage>
