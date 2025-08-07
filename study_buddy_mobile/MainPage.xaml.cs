@@ -1,4 +1,7 @@
-﻿namespace study_buddy_mobile
+﻿using study_buddy_mobile.Pages;
+using System.Threading.Tasks;
+
+namespace study_buddy_mobile
 {
     public partial class MainPage : ContentPage
     {
@@ -8,17 +11,17 @@
         {
             InitializeComponent();
         }
-
-        private void OnCounterClicked(object? sender, EventArgs e)
+        private async void OnTimerClicked(object sender, EventArgs e)
         {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            await Navigation.PushAsync(new TimerPage());
         }
+
+        private async void OnCalendarClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new CalendarPage());
+        }
+
+
+
     }
 }

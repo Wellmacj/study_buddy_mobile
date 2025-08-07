@@ -1,25 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="study_buddy_mobile.MainPage">
+             x:Class="study_buddy_mobile.MainPage" 
+            BackgroundColor="Gray">
 
-    <ContentPage.Content>
-        <StackLayout>
-            <!-- Add the UI components here -->
-        </StackLayout>
-    </ContentPage.Content>
+    <VerticalStackLayout
+    Padding="30"
+    Spacing="20"
+    VerticalOptions="Center">
+
+        <Label
+        Text="Study Buddy Home Page"
+        FontAttributes="Bold"
+        TextColor="DarkRed"
+        FontSize="48"
+        HorizontalOptions="Center" 
+        HorizontalTextAlignment="Center"/>
+
+        <Grid
+        RowDefinitions="Auto"
+        ColumnDefinitions="*,*"
+        ColumnSpacing="10">
+
+            <Button Text="Timer" BackgroundColor="DarkRed" TextColor="White" Grid.Column="0" Clicked="OnTimerClicked" FontSize="24" />
+            <Button Text="Calendar" BackgroundColor="DarkRed" TextColor="White" Grid.Column="1" Clicked="OnCalendarClicked" FontSize="24" />
+
+        </Grid>
+    </VerticalStackLayout>
+
 
 </ContentPage>
 
 
-<!-- 
-MainPage.xaml
-
-This is the main landing page for the app.
-
-TODO:
-- Display welcome message / user name (optional user profile?)
-- Quick links or buttons to navigate to other features: Calendar, To-Do, Study Buzzer, etc.
-- Daily overview summary: upcoming tasks, total study time for the day
-- Optionally display a motivational quote or progress bar for study goals
--->
