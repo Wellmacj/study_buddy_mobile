@@ -3,39 +3,49 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="study_buddy_mobile.Pages.CalendarPage"
-             Title="Study Buddy Calendar Picker">
+             Title="Study Buddy Calendar Picker"
+             BackgroundColor="Gray">
     <VerticalStackLayout Padding="20" Spacing="15">
 
-        <Label Text="Select a date:" FontSize="20" />
+        <Label Text="Select a date:" FontSize="24" />
 
         <DatePicker x:Name="CalendarPicker"
                     DateSelected="CalendarPicker_DateSelected"
-                    Format="D" />
+                    Format="D" 
+                    FontSize="18"/>
 
-        <Label Text="Add a Task:" FontSize="18" />
+        <Label Text="Add a Task:" FontSize="24" />
 
         <HorizontalStackLayout>
-            <Entry x:Name="TaskEntry" Placeholder="Enter task..." HorizontalOptions="FillAndExpand"/>
-            <Button Text="Add" Clicked="AddTask_Clicked" />
+            <Entry x:Name="TaskEntry" TextColor="White" PlaceholderColor="White" Placeholder="Enter task..." HorizontalOptions="FillAndExpand"/>
+            <Button Text="Add" TextColor="White" BackgroundColor="Red" Clicked="AddTask_Clicked" />
         </HorizontalStackLayout>
 
-        <Label x:Name="SelectedDateLabel" FontSize="16" />
+        <Label x:Name="SelectedDateLabel" FontSize="18" />
 
         <CollectionView x:Name="TaskListView">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Frame Padding="10" Margin="5" BorderColor="Gray">
                         <HorizontalStackLayout>
-                            <Label Text="{Binding Title}" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+                            <Label Text="{Binding Title}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Padding="5,10,10,10" BackgroundColor="DarkGray" TextColor="Black" FontSize="18" Margin="0,0,10,0"/>
                             <Button Text="Delete" Clicked="DeleteTask_Clicked" 
                         CommandParameter="{Binding .}" 
-                        BackgroundColor="LightCoral" 
+                        BackgroundColor="Red" 
                         TextColor="White" />
                         </HorizontalStackLayout>
                     </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-
+        <Grid RowDefinitions="*, 50"
+            ColumnDefinitions="*,*,*,*,*"
+            RowSpacing="16"
+            ColumnSpacing="5"
+            x:Name="buttonGrid">
+            <Button BackgroundColor="DarkRed" TextColor="White" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="Timer" Clicked="TimerClicked" FontSize="24" />
+            <Button BackgroundColor="DarkRed" TextColor="White" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" Text="Home" Clicked="HomeButton_Clicked" FontSize="24" />
+        </Grid>
     </VerticalStackLayout>
+    
 </ContentPage>

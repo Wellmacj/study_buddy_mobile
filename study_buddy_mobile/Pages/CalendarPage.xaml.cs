@@ -88,6 +88,13 @@ public partial class CalendarPage : ContentPage
         }
     }
 
-
+    private async void TimerClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new TimerPage());
+    }
+    private async void HomeButton_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new MainPage());
+    }
 
 }
